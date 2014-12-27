@@ -6,5 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
     <title>dummy</title>
   </head>
-  <body></body>
+  <body>
+  <p>Prueba</p>
+  </body>
 </html>
