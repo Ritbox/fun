@@ -1,18 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
   <ID class="oracle.javatools.db.IdentifierBasedID">
-    <identifier class="java.lang.String">a632e00e-1c64-4ddf-a6ac-b2d646a8393b</identifier>
+    <identifier class="java.lang.String">d9a32342-815d-4325-8d37-3a6bcb89a509</identifier>
   </ID>
-  <name>FUN_LISTA</name>
+  <name>BUN_LISTA</name>
   <columns>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">bc484ba3-248b-40bb-bf75-db43e5f82620</identifier>
+        <identifier class="java.lang.String">b336254a-c3ef-4149-b977-b8d2556fd23d</identifier>
       </ID>
       <name>ID</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">825b1779-6ebe-434c-9b07-908eb6c2c14f</identifier>
+          <identifier class="java.lang.String">77de388e-ac0b-42bf-8b52-4a1337016da7</identifier>
         </ID>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
@@ -25,9 +25,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>ID</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -44,9 +44,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>ID</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -56,12 +56,61 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">93a75308-2464-4ec4-9f8f-de20f8caf057</identifier>
+        <identifier class="java.lang.String">768916db-8074-4faa-a851-74784f168e31</identifier>
+      </ID>
+      <name>PADRE_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">c4402c3b-8b7d-498b-94a5-7bd043bf05b9</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PADRE_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PADRE_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">bdac0af8-4d29-4a34-94a8-07ed3149ac67</identifier>
       </ID>
       <name>CODIGO</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">cd7819fd-e17f-4da7-b2e2-d97ae862fed4</identifier>
+          <identifier class="java.lang.String">5089be7c-226b-45cb-b0df-cfb45797b94c</identifier>
         </ID>
         <attributeValues>
           <entry>
@@ -84,9 +133,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>CODIGO</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -103,9 +152,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>CODIGO</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -115,17 +164,17 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">bfd6c2e4-b8a0-45e7-9128-e75831676122</identifier>
+        <identifier class="java.lang.String">667aa736-6a8a-4c45-80fb-ca093c7d12c5</identifier>
       </ID>
       <name>NOMBRE</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">795fad27-93c3-4695-8037-0f4960329ae6</identifier>
+          <identifier class="java.lang.String">94440788-a4ee-48e2-aa04-b62f75ea5e6c</identifier>
         </ID>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">50</value>
+            <value class="java.lang.Long">80</value>
           </entry>
           <entry>
             <key>unit</key>
@@ -143,9 +192,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>NOMBRE</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -162,9 +211,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>NOMBRE</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -174,12 +223,12 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">77d66dd5-4d24-4170-8b9b-19f48b587cbf</identifier>
+        <identifier class="java.lang.String">00cb5117-d226-4c33-ac97-0a1bd2ae7094</identifier>
       </ID>
       <name>FECHA_CREACION</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">ca26726d-008c-458d-9c35-c9e230f5a81a</identifier>
+          <identifier class="java.lang.String">95d4eca4-7dba-44c2-ab77-4c2ec43ad1be</identifier>
         </ID>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
@@ -192,9 +241,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>FECHA_CREACION</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -211,9 +260,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>FECHA_CREACION</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -223,12 +272,12 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">27bcf518-2cb8-4049-b432-eafcf48e9a98</identifier>
+        <identifier class="java.lang.String">809e8c75-c1a2-4839-a7d9-718dc86c3460</identifier>
       </ID>
       <name>USUARIO_CREACION</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">13bb5306-baee-4bfe-bc8e-d578c611b66a</identifier>
+          <identifier class="java.lang.String">049cd937-c8f4-45c1-a739-92ce7c948b2c</identifier>
         </ID>
         <attributeValues>
           <entry>
@@ -251,9 +300,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>USUARIO_CREACION</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -270,9 +319,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>USUARIO_CREACION</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -282,12 +331,12 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">44975d37-2ec5-4487-8dc5-ca22da017c1c</identifier>
+        <identifier class="java.lang.String">ab8aa3f6-0b41-4839-b9d8-cebc7bb101ec</identifier>
       </ID>
       <name>FECHA_ACTUALIZACION</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">1b8386ff-3126-4812-a244-93c8da4e149e</identifier>
+          <identifier class="java.lang.String">b5166e64-3a05-4eda-a113-75fdd5115e0d</identifier>
         </ID>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
@@ -300,9 +349,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>FECHA_ACTUALIZACION</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -319,9 +368,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>FECHA_ACTUALIZACION</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -331,12 +380,12 @@
     </column>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">a42da028-80d8-4a12-801b-46cecd8ca81a</identifier>
+        <identifier class="java.lang.String">3fe7e2e0-b229-4c60-bb6f-e448a432d323</identifier>
       </ID>
       <name>USUARIO_ACTUALIZACION</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">cbf15961-3db3-4441-b119-e1394486b86c</identifier>
+          <identifier class="java.lang.String">8ec44457-233b-43f7-bf26-f1ccc70a3e69</identifier>
         </ID>
         <attributeValues>
           <entry>
@@ -359,9 +408,9 @@
               <parent class="oracle.javatools.db.ReferenceID">
                 <name>USUARIO_ACTUALIZACION</name>
                 <parent class="oracle.javatools.db.ReferenceID">
-                  <name>FUN_LISTA</name>
-                  <identifier class="java.math.BigDecimal">20171</identifier>
-                  <schemaName>FUN</schemaName>
+                  <name>BUN_LISTA</name>
+                  <identifier class="java.math.BigDecimal">20191</identifier>
+                  <schemaName>BUN</schemaName>
                   <type>TABLE</type>
                 </parent>
                 <type>COLUMN</type>
@@ -378,9 +427,9 @@
           <value class="oracle.javatools.db.ReferenceID">
             <name>USUARIO_ACTUALIZACION</name>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <type>COLUMN</type>
@@ -390,22 +439,75 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">3b4a53be-9022-47a7-a739-de7345851705</identifier>
+      </ID>
+      <name>BUN_LISTA_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>PADRE_ID</name>
+          <identifier class="java.lang.String">768916db-8074-4faa-a851-74784f168e31</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>BUN_LISTA</name>
+            <identifier class="java.lang.String">d9a32342-815d-4325-8d37-3a6bcb89a509</identifier>
+            <schemaName>BUN</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>BUN</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BUN_LISTA_FK</name>
+            <childObjectNames>
+              <childObjectName>PADRE_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>BUN_LISTA_PK</name>
+        <identifier class="java.lang.String">6a714024-b41b-4dee-8789-be3b0b499bac</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>BUN_LISTA</name>
+          <identifier class="java.lang.String">d9a32342-815d-4325-8d37-3a6bcb89a509</identifier>
+          <schemaName>BUN</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>BUN</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <ID class="oracle.javatools.db.IdentifierBasedID">
-        <identifier class="java.lang.String">01712755-4e02-4534-84f4-1585253aff28</identifier>
+        <identifier class="java.lang.String">6a714024-b41b-4dee-8789-be3b0b499bac</identifier>
       </ID>
-      <name>FUN_LISTA_PK</name>
+      <name>BUN_LISTA_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.IdentifierBasedID">
           <name>ID</name>
-          <identifier class="java.lang.String">bc484ba3-248b-40bb-bf75-db43e5f82620</identifier>
+          <identifier class="java.lang.String">b336254a-c3ef-4149-b977-b8d2556fd23d</identifier>
           <parent class="oracle.javatools.db.IdentifierBasedID">
-            <name>FUN_LISTA</name>
-            <identifier class="java.lang.String">a632e00e-1c64-4ddf-a6ac-b2d646a8393b</identifier>
-            <schemaName>FUN</schemaName>
+            <name>BUN_LISTA</name>
+            <identifier class="java.lang.String">d9a32342-815d-4325-8d37-3a6bcb89a509</identifier>
+            <schemaName>BUN</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>FUN</schemaName>
+          <schemaName>BUN</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -414,14 +516,14 @@
         <entry>
           <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
           <value class="oracle.javatools.db.ReferenceID">
-            <name>FUN_LISTA_PK</name>
+            <name>BUN_LISTA_PK</name>
             <childObjectNames>
               <childObjectName>ID</childObjectName>
             </childObjectNames>
             <parent class="oracle.javatools.db.ReferenceID">
-              <name>FUN_LISTA</name>
-              <identifier class="java.math.BigDecimal">20171</identifier>
-              <schemaName>FUN</schemaName>
+              <name>BUN_LISTA</name>
+              <identifier class="java.math.BigDecimal">20191</identifier>
+              <schemaName>BUN</schemaName>
               <type>TABLE</type>
             </parent>
             <subType>PKConstraint</subType>
@@ -435,9 +537,9 @@
     <entry>
       <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
       <value class="oracle.javatools.db.ReferenceID">
-        <name>FUN_LISTA</name>
-        <identifier class="java.math.BigDecimal">20171</identifier>
-        <schemaName>FUN</schemaName>
+        <name>BUN_LISTA</name>
+        <identifier class="java.math.BigDecimal">20191</identifier>
+        <schemaName>BUN</schemaName>
         <type>TABLE</type>
       </value>
     </entry>
@@ -445,7 +547,7 @@
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">4fb254e5-91ac-408f-bedf-a98905328bde</identifier>
+          <identifier class="java.lang.String">ff3657c7-f60b-49b4-9a67-1f7d67a3b9ab</identifier>
         </ID>
         <bufferMode>DEFAULT</bufferMode>
         <freelistGroups>1</freelistGroups>
@@ -463,9 +565,9 @@
             <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
             <value class="oracle.javatools.db.ReferenceID">
               <parent class="oracle.javatools.db.ReferenceID">
-                <name>FUN_LISTA</name>
-                <identifier class="java.math.BigDecimal">20171</identifier>
-                <schemaName>FUN</schemaName>
+                <name>BUN_LISTA</name>
+                <identifier class="java.math.BigDecimal">20191</identifier>
+                <schemaName>BUN</schemaName>
                 <type>TABLE</type>
               </parent>
               <type>OracleStorageProperties</type>
@@ -484,6 +586,6 @@
     </entry>
   </properties>
   <schema>
-    <name>FUN</name>
+    <name>BUN</name>
   </schema>
 </table>

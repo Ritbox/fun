@@ -4,19 +4,24 @@ import java.io.Serializable;
 
 import java.sql.Timestamp;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-  @NamedQuery(name = "FunLista.findAll", query = "select o from FunLista o")
+  @NamedQuery(name = "BunLista.findAll", query = "select o from BunLista o")
 })
-@Table(name = "FUN_LISTA")
-public class FunLista implements Serializable {
+@Table(name = "BUN_LISTA")
+public class BunLista implements Serializable {
     @Column(nullable = false, length = 20)
     private String codigo;
     @Column(name="FECHA_ACTUALIZACION")
@@ -26,24 +31,31 @@ public class FunLista implements Serializable {
     @Id
     @Column(nullable = false)
     private Long id;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 80)
     private String nombre;
     @Column(name="USUARIO_ACTUALIZACION", length = 20)
     private String usuarioActualizacion;
     @Column(name="USUARIO_CREACION", nullable = false, length = 20)
     private String usuarioCreacion;
+    @ManyToOne
+    @JoinColumn(name = "PADRE_ID")
+    private BunLista bunLista;
+    @OneToMany(mappedBy = "bunLista")
+    private List<BunLista> bunListaList;
 
-    public FunLista() {
+    public BunLista() {
     }
 
-    public FunLista(String codigo, Timestamp fechaActualizacion,
+    public BunLista(String codigo, Timestamp fechaActualizacion,
                     Timestamp fechaCreacion, Long id, String nombre,
-                    String usuarioActualizacion, String usuarioCreacion) {
+                    BunLista bunLista, String usuarioActualizacion,
+                    String usuarioCreacion) {
         this.codigo = codigo;
         this.fechaActualizacion = fechaActualizacion;
         this.fechaCreacion = fechaCreacion;
         this.id = id;
         this.nombre = nombre;
+        this.bunLista = bunLista;
         this.usuarioActualizacion = usuarioActualizacion;
         this.usuarioCreacion = usuarioCreacion;
     }
@@ -88,6 +100,7 @@ public class FunLista implements Serializable {
         this.nombre = nombre;
     }
 
+
     public String getUsuarioActualizacion() {
         return usuarioActualizacion;
     }
@@ -102,5 +115,33 @@ public class FunLista implements Serializable {
 
     public void setUsuarioCreacion(String usuarioCreacion) {
         this.usuarioCreacion = usuarioCreacion;
+    }
+
+    public BunLista getBunLista() {
+        return bunLista;
+    }
+
+    public void setBunLista(BunLista bunLista) {
+        this.bunLista = bunLista;
+    }
+
+    public List<BunLista> getBunListaList() {
+        return bunListaList;
+    }
+
+    public void setBunListaList(List<BunLista> bunListaList) {
+        this.bunListaList = bunListaList;
+    }
+
+    public BunLista addBunLista(BunLista bunLista) {
+        getBunListaList().add(bunLista);
+        bunLista.setBunLista(this);
+        return bunLista;
+    }
+
+    public BunLista removeBunLista(BunLista bunLista) {
+        getBunListaList().remove(bunLista);
+        bunLista.setBunLista(null);
+        return bunLista;
     }
 }

@@ -55,6 +55,15 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="viewcontroller"/>
+   <hash n="oracle.ide.model.DependencyConfiguration">
+      <list n="dependencyList">
+         <hash>
+            <value n="class" v="oracle.jdeveloper.library.ProjectLibrary"/>
+            <url n="sourceOwnerURL" path="../fun.jws"/>
+            <url n="sourceURL" path="../Model/Model.jpr"/>
+         </hash>
+      </list>
+   </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="Cp1252"/>
       <list n="Javac.commandline.optionlist">
@@ -100,10 +109,26 @@
             <value n="id" v="JPS Designtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="JSP Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Servlet Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
             <value n="id" v="JPS Designtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JSP Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Servlet Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
