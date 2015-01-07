@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <schema xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
   <ID class="oracle.javatools.db.IdentifierBasedID">
-    <identifier class="java.lang.String">71336195-4381-4354-a3f7-326d748c9050</identifier>
+    <identifier class="java.lang.String">c603583a-c97f-476b-ad4c-93436d20a9a5</identifier>
   </ID>
-  <name>FUN</name>
+  <name>BUN</name>
 </schema>

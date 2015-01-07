@@ -17,4 +17,26 @@
     <dispatcher>REQUEST</dispatcher>
     <dispatcher>INCLUDE</dispatcher>
   </filter-mapping>
+  <servlet>
+    <servlet-name>EvaluacionRiesgoServlet</servlet-name>
+    <servlet-class>co.ritbox.view.servlets.EvaluacionRiesgoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CentralServlet</servlet-name>
+    <servlet-class>co.ritbox.view.FrontController.CentralServlet</servlet-class>
+    <init-param>
+      <param-name>mapping</param-name>
+      <param-value>/WEB-INF/mappings.properties</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EvaluacionRiesgoServlet</servlet-name>
+    <url-pattern>/evaluacionriesgoservlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CentralServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -16,7 +16,7 @@
             <Contents>localhost</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="user">
-            <Contents>fun</Contents>
+            <Contents>bun</Contents>
          </StringRefAddr>
          <SecureRefAddr addrType="password"/>
          <StringRefAddr addrType="DeployPassword">
